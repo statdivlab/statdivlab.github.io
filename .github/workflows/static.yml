@@ -41,6 +41,14 @@ jobs:
         with:
           path: ./ 
           name: build-artifact
+          # add step to see if artifact exists 
+      - name: Check if artifact exists
+        run: |
+          if [ -f "build-artifact.zip" ]; then
+            echo "Artifact exists!";
+          else
+            echo "Artifact does not exist!";
+          fi
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
