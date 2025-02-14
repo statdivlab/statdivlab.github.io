@@ -38,6 +38,9 @@ jobs:
         with:
           # Upload entire repository
           path: ./
+          name: build-artifact
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact-name: build_artifact
