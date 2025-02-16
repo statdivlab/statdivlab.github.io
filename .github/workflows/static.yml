@@ -31,12 +31,6 @@ jobs:
       - name: Debug List directory contents before build
         run: ls -alh
 
-      - name: Install dependencies (if needed)
-        run: npm install  # Adjust this for your project type
-
-      - name: Build project (if needed)
-        run: npm run build  # Adjust this for your project type
-
       - name: Debug List directory contents after build
         run: ls -alh
 
