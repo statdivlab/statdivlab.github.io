@@ -28,7 +28,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Debug: List directory contents before build
+      - name: Debug List directory contents before build
         run: ls -alh
 
       - name: Install dependencies (if needed)
@@ -37,7 +37,7 @@ jobs:
       - name: Build project (if needed)
         run: npm run build  # Adjust this for your project type
 
-      - name: Debug: List directory contents after build
+      - name: Debug List directory contents after build
         run: ls -alh
 
       - name: Upload artifact
