@@ -26,22 +26,13 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
-
-      - name: Debug List directory contents before build
-        run: ls -alh
-
-      - name: Debug List directory contents after build
-        run: ls -alh
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./
-          name: build-artifact
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_name: build-artifact.zip
+        uses: actions/deploy-pages@v4
